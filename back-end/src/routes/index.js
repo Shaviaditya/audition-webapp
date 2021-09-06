@@ -282,7 +282,7 @@ module.exports = function (app, passport) {
   );
 
   app.get(
-    "/auth/google/redirect",
+    "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
       const payload = {
@@ -319,7 +319,7 @@ module.exports = function (app, passport) {
   );
 
   app.get(
-    "/auth/github/redirect",
+    "/auth/github/callback",
     passport.authenticate("github"),
     function (req, res) {
       const payload = {

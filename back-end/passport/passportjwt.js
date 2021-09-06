@@ -9,7 +9,8 @@ const User = require('../src/models/user.model');
 module.exports = function (passport) {
     let opts = {};
     opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-    opts.secretOrKey = process.env.SECRET;
+    opts.secretOrKey = 'GLUGAUDITION2021';
+    //opts.secretOrKey = process.env.SECRET;
     passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
         User.getUserById(jwt_payload.id, (err, User) => {
             if (err) {

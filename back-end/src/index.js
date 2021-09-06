@@ -10,6 +10,8 @@ var morgan = require('morgan')
 let cors = require('cors')
 var passport = require('passport')
 const cookieSession = require('cookie-session');
+const dotenv = require('dotenv')
+require('dotenv').config()
 //const mongoSanitize = require('express-mongo-sanitize');
 
 
